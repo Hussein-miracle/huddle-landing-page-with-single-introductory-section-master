@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url(./images/bg-desktop.svg),url(./images/bg-desktop.svg);
+    background-color: hsl(257, 40%, 49%);
+    background-size: cover / cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: "Open Sans",sans-serif;
+    padding: 2rem 6rem;
+}
+
+header{
+    /* height: 20vh; */
+    padding-bottom: 2rem;
+}
+
+.header__logo{
+    width: 12rem;
+    height: 6rem;
+    margin-left: -2rem;
+    
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.main__content{
+    width: 40vw;
+    line-height: 1.2;
+    padding: 2rem 3rem;
+}
+.main__content--title{
+    color: #fff;
+    font-family: "Poppins";
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.main__content--title:last-of-type{
+    margin-bottom: 3rem;
+}
+.main__content--paragraph{
+    display: block;
+    margin-bottom: 3rem;
+    color: #fff;
+    font-family: "Open Sans";
+    font-weight: 400;
+    
+}
+.main__image{
+    width: 45vw;
+    height: 65vh;
+    object-fit: contain;
+    
+}
+.link{
+    background-color: #fff;
+    color: hsl(300, 69%, 71%);
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 1.6rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+    
+}
+.link:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+
+}
+
+
+footer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+.socials{
+    display: flex;
+    justify-content: space-between;
+} 
+
+.icon{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: 1rem;
+    text-align: center;
+    position: relative;
+    transition: all .2s;
+    
+}
+.icon:hover{
+    border: 2px solid hsl(300, 69%, 71%);
+}
+.icon:hover .icon-img{
+    fill: hsl(300, 69%, 71%);
+}
+
+
+.icon-img{
+    width: 1rem;
+    height: 1rem;
+    fill: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+
+}
+
+@media(max-width:17.5em){
+    .main__content{
+        justify-content: center;
+        margin-left: -1rem;
+        margin-top: -3rem;
+    }
+    .link{
+        text-align: center;
+        justify-self: center;
+        margin-left: -2rem;
+        transform: translateX(-16%);
+    }
+
+    
+}
+
+@media (max-width:23.75em) {
+    body{
+        background-image: url(./images/bg-mobile.svg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding: 2rem;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__content{
+        width: 100vw;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    .main__image{
+        width: 80vw;
+        height: 80vh;
+        object-fit: contain;
+        margin-top: -6rem;
+        margin-left: -1rem;
+        margin-bottom: -3rem;
+    }
+    .link{
+        padding: .5rem 4rem;
+        border-radius: 1.6rem;
+        align-self: center;
+        /* margin-left: 1rem; */
+        margin: 0 auto;
+    }
+    .header__logo{
+        margin-top: -2rem;
+        margin-left: -4rem;
+        align-self: flex-start;
+    }
+}
+
+
+@media (max-width:25.6875em) {
+    .main__image{
+        width: 45vw;
+        height: 80vh;
+        object-fit: contain;
+        margin-top: -6rem;
+        margin-left: -1rem;
+        margin-right: 0;
+        transform: translateX(16%);
+    }
+
+    body{
+        background-image: url(./images/bg-mobile.svg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .main__content{
+        width: 55vw;
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
+
